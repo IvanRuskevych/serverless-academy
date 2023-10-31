@@ -7,14 +7,13 @@ function uniqueValues() {
   const set = new Set();
 
   for (let i = 0; i < 20; i++) {
-    const path = "./db/out" + i + ".txt"; // переписати через __dirname
+    const path = "./db/out" + i + ".txt";
 
     const data = readFileSync(path).toString().split("\n");
 
     data.forEach((value) => set.add(value));
   }
 
-  // console.log("🚀 ~ uniqueValues ~ set:", set);
   return set.size;
 }
 
@@ -42,7 +41,6 @@ function getListRecords() {
   const arrayOfArrays = getArrayOfArrays();
 
   const listRecords = {};
-  // let element;
   let count;
 
   for (let i = 0; i < arrayOfArrays.length; i++) {
@@ -78,7 +76,6 @@ function existInAllFiles() {
  * Getting the number of user names that are exist at least in 10 of 20 files
  */
 function existInAtleastTen() {
-  // count all values that exists in at least 10 files
   let count = 0;
 
   for (let element in listRecords) {
