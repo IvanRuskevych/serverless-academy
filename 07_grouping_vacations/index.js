@@ -1,6 +1,5 @@
-// const { readFileSync, writeFileSync } = require("fs");
-
 import { readFileSync, writeFileSync } from "fs";
+
 /**
  * Function for getting existing users database
  */
