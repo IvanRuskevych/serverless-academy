@@ -3,6 +3,8 @@ const logger = require("morgan");
 const cors = require("cors");
 require("dotenv").config();
 
+const authRouter = require("./routers/auth.router");
+
 const app = express();
 
 const formatsLogger = app.get("env") === "development" ? "dev" : "short";
@@ -11,7 +13,7 @@ app.use(logger(formatsLogger));
 app.use(cors());
 app.use(express.json());
 
-// app.use("/auth");
+app.use("/auth", authRouter);
 // app.use("/me");
 
 app.get("/", (req, res) => {
