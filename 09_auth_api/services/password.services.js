@@ -4,4 +4,8 @@ const hashPassword = async (password) => {
   return await bcrypt.hash(password, 10);
 };
 
-module.exports = { hashPassword };
+const validatePassword = async (passwordReq, passwordDb) => {
+  return await bcrypt.compare(passwordReq, passwordDb);
+};
+
+module.exports = { hashPassword, validatePassword };

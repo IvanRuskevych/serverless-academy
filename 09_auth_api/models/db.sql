@@ -4,6 +4,6 @@ CREATE TABLE users(
 id VARCHAR(255) PRIMARY KEY NOT NULL,
 email VARCHAR(255) NOT NULL,
 password CHAR(60) NOT NULL,
-refreshToken TEXT NULL,
+refresh_token TEXT NULL,
 create_at TIMESTAMP NOT NULL DEFAULT NOW()
 )
