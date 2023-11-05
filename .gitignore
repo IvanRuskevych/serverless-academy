@@ -130,4 +130,4 @@ dist
 .pnp.*
 
 # othe files
-server.js
+server.example.js
