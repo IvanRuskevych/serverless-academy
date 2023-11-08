@@ -3,7 +3,7 @@ const cors = require("cors");
 const logger = require("morgan");
 require("dotenv").config();
 
-const countryRouter = require("./routers/country.router");
+const countryRouter = require("./routes/country.routes");
 
 const app = express();
 const formatLogger = app.get(".env") === "development" ? "dev" : "short";
