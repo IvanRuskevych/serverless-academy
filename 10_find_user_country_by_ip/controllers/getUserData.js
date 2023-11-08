@@ -1,6 +1,7 @@
 const net = require("node:net");
 
 const { findCountryByIP } = require("../services");
+const { wrapperTryCatch } = require("../utils");
 
 async function getUserData(req, res) {
   const ip = req.header("x-forwarded-for");
@@ -12,4 +13,4 @@ async function getUserData(req, res) {
   }
 }
 
-module.exports = { getUserData };
+module.exports = { getUserData: wrapperTryCatch(getUserData) };
