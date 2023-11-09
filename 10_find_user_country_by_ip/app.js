@@ -12,7 +12,8 @@ app.use(logger(formatLogger));
 app.use(cors());
 app.use(express.json());
 
-app.get("/", countryRouter);
+app.use("/", countryRouter);
+
 app.use((_, res) => {
   res.status(404).json({ message: "Not found" });
 });
