@@ -1,7 +1,6 @@
 const { existsSync } = require("fs");
-const path = require("path");
-
 const { mkdir } = require("fs/promises");
+const path = require("path");
 
 function createDir() {
   const dirDB = path.join(__dirname, "../", "db");
