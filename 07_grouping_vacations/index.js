@@ -1,11 +1,11 @@
-import { readFileSync, writeFileSync } from "fs";
+import { readFileSync, writeFileSync } from 'fs';
 
 /**
  * Function for getting existing users database
  */
 function getOriginalData() {
   try {
-    let originalData = JSON.parse(readFileSync("data.json"));
+    let originalData = JSON.parse(readFileSync('data.json'));
     return originalData;
   } catch (error) {
     console.error(error.message);
@@ -46,10 +46,7 @@ function vacationsData() {
 
   const vacationsDatabase = createVacationsDatabase(originalData);
 
-  writeFileSync(
-    "vacationsByUser.json",
-    JSON.stringify(vacationsDatabase, null, 2)
-  );
+  writeFileSync('dataByUser.json', JSON.stringify(vacationsDatabase, null, 2));
 
   return;
 }
