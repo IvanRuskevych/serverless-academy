@@ -8,7 +8,7 @@
     "dev": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ivan Ruskevych",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
